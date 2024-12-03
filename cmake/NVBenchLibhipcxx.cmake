@@ -40,4 +40,12 @@ function(find_and_configure_libhipcxx)
 
 endfunction()
 
-find_and_configure_libhipcxx()
+# find_and_configure_libhipcxx()
+
+rapids_cpm_find(libhipcxx 1.0
+  CPM_ARGS
+    GITHUB_REPOSITORY bvlgah/libhipcxx
+    GIT_TAG main
+    GIT_SHALLOW TRUE
+    EXCLUDE_FROM_ALL OFF
+)
